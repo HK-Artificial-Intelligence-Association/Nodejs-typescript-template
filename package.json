@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-template",
+  "version": "1.0.0",
+  "description": "元狲科技nodejs命令行程序开发模板",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"node --experimental-specifier-resolution=node --import ./register.js  index.ts"
+  },
+  "author": "Wendaolee",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "esm": "^3.2.25",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+  }
+}
