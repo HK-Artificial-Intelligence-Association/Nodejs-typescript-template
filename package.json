@@ -7,11 +7,12 @@
   "scripts": {
     "test": "jest",
     "test:cover": "jest --coverage",
-    "dev": "tsx src/index.ts",
-    "dev:watch": "tsx  watch src/index.ts --inspect ",
+    "dev": "tsx watch src/index.ts",
+    "start": "tsc --noEmit && tsx src/index.ts",
     "type-check": "tsc --noEmit",
     "build": "babel src --extensions \".ts,.tsx,.js,.jsx\" --out-dir dist",
-    "build:start": "npm run build && node dist/index.js"
+    "build:start": "npm run build && node dist/index.js",
+    "js:start":"node dist/index.js"
   },
   "author": "YuanSunTech - Wendaolee",
   "devDependencies": {

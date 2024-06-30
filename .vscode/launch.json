@@ -6,7 +6,7 @@
       "name": "debug index.ts",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
-        "run","dev:watch"
+        "run","dev"
       ],
       "cwd": "${workspaceFolder}",
       "args": ["./src/index.ts"],
