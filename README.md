@@ -53,6 +53,12 @@
 
 运行 `npm run js:start` 运行目前编译好的程序。
 
+## 2.4 进行测试
+
+运行 `npm run test` 进行测试。
+
+运行 `npm run test:cover` 在测试后会生成测试的代码覆盖率。 
+
 
 
 
