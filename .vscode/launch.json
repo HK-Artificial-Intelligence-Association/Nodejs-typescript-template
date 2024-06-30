@@ -4,16 +4,15 @@
       "type": "node",
       "request": "launch",
       "name": "debug index.ts",
+      "runtimeExecutable": "npm",
       "runtimeArgs": [
-        "--experimental-specifier-resolution=node",
-        "--import",
-        "./register.js"
+        "run","dev:watch"
       ],
       "cwd": "${workspaceFolder}",
-      "args": ["./index.ts"],
+      "args": ["./src/index.ts"],
       "internalConsoleOptions": "openOnSessionStart",
-      // 如果想使用 vscode 内置 console ，删去这行即可
-      "console": "externalTerminal"
+      // 如果不想使用 vscode 内置 console，取消注释即可 
+      // "console": "externalTerminal"
     }
   ]
 }
