@@ -1,23 +1,35 @@
 {
   "name": "nodejs-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "元狲科技nodejs命令行程序开发模板",
-  "main": "index.ts",
+  "main": "./src/index.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"node --experimental-specifier-resolution=node --import ./register.js  index.ts"
+    "test": "jest",
+    "test:cover": "jest --coverage",
+    "dev": "tsx src/index.ts",
+    "dev:watch": "tsx  watch src/index.ts --inspect ",
+    "type-check": "tsc --noEmit",
+    "build": "babel src --extensions \".ts,.tsx,.js,.jsx\" --out-dir dist",
+    "build:start": "npm run build && node dist/index.js"
   },
-  "author": "Wendaolee",
-  "license": "MIT",
+  "author": "YuanSunTech - Wendaolee",
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.12.10",
+    "babel-plugin-module-resolver": "^5.0.2",
     "esm": "^3.2.25",
+    "jest": "^29.7.0",
     "prettier": "^3.2.5",
+    "ts-jest": "^29.1.5",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.4.5"
-  },
-  "dependencies": {
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.2"
   }
 }

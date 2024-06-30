@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "baseUrl": "./",
     "outDir": "./dist",
     "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noEmit": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "resolvePackageJsonExports": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
   },
-  "include": ["**/*.ts", "**/*.mts", "./module/*.ts"],
-  "exclude": ["node_modules"],
-  "ts-node": {
-    "esm": true,
-  }
+  "include": ["**/*.ts", "**/*.mts","./src/**/*.d.ts", "jest.config.ts.backup"],
+  "exclude": ["node_modules"]
 }
