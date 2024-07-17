@@ -60,6 +60,13 @@
 运行 `npm run test:cover` 在测试后会生成测试的代码覆盖率。 
 
 
+## 3.0 一些已知的问题
+
+如果在运行测试时遇见了模块问题或是其他导入问题，可以考虑将 `package.json` 中的 jest 相关语句改为：`jest --config jest.config.js` 或 `jest --config jest.config.ts` 。
+
+建议在使用该模板的时候先试着运行一下测试，看看本地能不能跑通。
+
+目前造成该问题的原因未知。Jest 以及 ts-jest 的相关文档有点混乱。
 
 
 
