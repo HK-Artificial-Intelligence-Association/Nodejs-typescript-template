@@ -1,20 +1,22 @@
 {
-  "name": "nodejs-template",
+  "name": "node-typescript-template",
   "version": "1.0.1",
   "description": "元狲科技nodejs命令行程序开发模板",
   "main": "./src/index.ts",
   "type": "module",
+  "author": "YuanSunTech - Wendaolee",
+  "license":"MIT",
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --config=jest.config.ts",
     "test:cover": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
+    "clean": "rimraf dist",
     "dev": "tsx watch src/index.ts",
     "start": "tsc --noEmit && tsx src/index.ts",
     "type-check": "tsc --noEmit",
-    "build": "babel src --extensions \".ts,.tsx,.js,.jsx\" --out-dir dist",
+    "build": "npm run clean && babel src --extensions \".ts,.tsx,.js,.jsx\" --out-dir dist &&  tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "build:start": "npm run build && node dist/index.js",
     "js:start": "node dist/index.js"
   },
-  "author": "YuanSunTech - Wendaolee",
   "devDependencies": {
     "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
@@ -33,5 +35,9 @@
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.15.7",
     "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "rimraf": "^6.0.1",
+    "tsc-alias": "^1.8.10"
   }
 }
