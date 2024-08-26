@@ -7,6 +7,7 @@
   "author": "YuanSunTech - Wendaolee",
   "license":"MIT",
   "scripts": {
+    "repl":"tsx ./repl.ts",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --config=jest.config.ts",
     "test:cover": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
     "clean": "rimraf dist",
