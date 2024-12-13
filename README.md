@@ -69,6 +69,8 @@
 
 ### 2.5 使用REPL环境
 
+> **NOTE** : 如果你有钱，推荐使用 [Quokka.js 插件](https://quokkajs.com/) 进行测试。 
+
 运行 `npm run repl` ，即可进入相应的交互式环境：
 
 ```bash
