@@ -6,10 +6,10 @@
       "name": "debug index.ts",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
-        "run","dev"
+        "run","debug"
       ],
       "cwd": "${workspaceFolder}",
-      "args": ["./src/index.ts"],
+      "args": ["${file}"],
       "internalConsoleOptions": "openOnSessionStart",
       // 如果不想使用 vscode 内置 console，取消注释即可 
       // "console": "externalTerminal"

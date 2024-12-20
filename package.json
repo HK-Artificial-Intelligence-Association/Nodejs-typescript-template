@@ -10,6 +10,7 @@
     "repl": "tsx ./repl.ts",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --config=jest.config.ts",
     "test:cover": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
+    "debug": "tsx watch ",
     "clean": "rimraf dist",
     "dev": "tsx watch src/index.ts",
     "start": "tsc --noEmit && tsx src/index.ts",
