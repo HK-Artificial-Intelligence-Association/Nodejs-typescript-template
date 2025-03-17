@@ -139,5 +139,9 @@ Hello world
 
 目前造成该问题的原因未知。Jest 以及 ts-jest 的相关文档有点混乱。
 
+## 其他
+
+- 如果你想取消掉 Typescript 的类型推断长度的限制（这对于使用 `EffectTS` 这类的库时会非常有用）以获得更好的开发类型提示体验，可以运行 `./typescript_extend_type_infer.ps1` 脚本。详情可见：[https://github.com/microsoft/vscode/issues/64566](https://github.com/microsoft/vscode/issues/64566)。
 
 
+- 推荐使用 `EffectTS` 进行程序代码的组织，这是一个非常棒的开发库。
