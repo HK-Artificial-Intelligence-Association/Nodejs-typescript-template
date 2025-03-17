@@ -8,7 +8,7 @@
 
 ## 1.0 特性
 - 使用 **ESM Module**。
-- 支持对于入口文件 `src/index.ts` 直接运行Typescript & VSCode 下的 Typescript Debug。
+- 支持对于单个文件直接运行Typescript & VSCode 下的 Typescript Debug。
 - 运行 `npm run type-check` 进行程序的类型检查。
 - 使用 `jest` 作为测试框架。
 - 使用 `tsx` 作为 typescript 的 executor。
