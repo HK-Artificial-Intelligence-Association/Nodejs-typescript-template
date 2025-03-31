@@ -2,6 +2,7 @@ import repl from 'node:repl';
 import { statSync,readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { show } from 'showify';
 
 const logLevel = process.env.LOG_LEVEL || 'info';
 
@@ -23,7 +24,15 @@ const debugGroupEnd = () => {
     }
 }
 
-const replServer = repl.start();
+const replServer = repl.start({
+    writer:(output:any) => {
+        try {
+            return show(output,{colors:true});
+        } catch (error) {
+            return output;
+        }
+    }
+});
 console.log('')
 console.group('--- REPL Of NODE ---')
 console.log('该 REPL 会默认将所有 ./src 目录下的模块（包括子目录下的模块）导出到顶级，为了方便索引查看会将所有模块同时放在 INDEX 命名空间下')

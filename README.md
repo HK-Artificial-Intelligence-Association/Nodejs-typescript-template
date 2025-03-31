@@ -15,7 +15,7 @@
 - 支持使用`@` 作为路径 `src/` 别名。
 - 符合 [tsc 对于 nodejs 的模块输出处理的配置项](https://www.typescriptlang.org/docs/handbook/modules/theory.html#the-module-output-format)。
 - **使用 `.ts` 后缀进行模块、函数的导入**。
-- 支持 Nodejs 的 `repl` 
+- 支持 Nodejs 的 `repl` 环境，并且使用 [showify](https://github.com/Snowflyt/showify) 进行输出美化。。
 - 「还处于实验阶段的特性」使用 `npm run build:start` 使用 babel 编译为 js 后，在 nodejs 环境下运行。
 
 > 请注意，由于转义 import 路径的 plugin 是自己写的，可能会存在一些路径导入的问题。因为可能存在潜在的问题，并不推荐使用该特性。
@@ -69,7 +69,6 @@
 
 ### 2.5 使用REPL环境
 
-> **NOTE** : 如果你有钱，推荐使用 [Quokka.js 插件](https://quokkajs.com/) 进行测试。 
 
 运行 `npm run repl` ，即可进入相应的交互式环境：
 
@@ -124,6 +123,8 @@ Hello world
 > index.add(1,2)
 3
 ```
+
+> 当然，现在，如果你有钱，我个人更推荐使用 [Quokka.js 插件](https://quokkajs.com/) 进行测试。
 
 同样，在 repl 环境中，是支持顶层 `await` 的，你可以通过它测试某些异步函数。
 
