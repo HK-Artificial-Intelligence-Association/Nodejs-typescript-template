@@ -6,6 +6,12 @@
 
 供参考使用。
 
+快速安装：
+
+```bash
+npx degit https://github.com/HK-Artificial-Intelligence-Association/Nodejs-typescript-template $YOUR_TARGET_PATH
+```
+
 ## 1.0 特性
 - 使用 **ESM Module**。
 - 支持对于单个文件直接运行Typescript & VSCode 下的 Typescript Debug。
